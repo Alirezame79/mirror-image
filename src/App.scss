@@ -1,0 +1,10 @@
+@use 'base';
+
+.main-container {
+    background-color: base.$major-background;
+    border-radius: 25px;
+    position: fixed;
+    top: 100px;
+    right: 20%;
+    left: 20%;
+}

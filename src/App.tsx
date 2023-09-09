@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import SearchImage from './components/SearchImage';
+import './App.scss';
+import ShowImage from './components/ShowImage';
+import { imageProp } from './types/imageProp';
 
-function App() {
+export default function App() {
+  const [imageUrl, setImageUrl] = useState<imageProp>()
+
+  function getUrl(url: imageProp) {
+    console.log(url)
+    setImageUrl(url)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-container'>
+      <ShowImage url={imageUrl}/>
+      <SearchImage url={getUrl}/>
     </div>
   );
 }
-
-export default App;
