@@ -16,7 +16,7 @@ export default function SearchImage({url}: any) {
 
     return (
         <div className="search-image-container">
-            <input className="search-input" ref={imageUrl} type="text"/>
+            <input className="search-input" placeholder="Enter Image url here" ref={imageUrl} type="text"/>
             <button className="search-btn" onClick={urlEntered}>Search!</button>
         </div>
     )

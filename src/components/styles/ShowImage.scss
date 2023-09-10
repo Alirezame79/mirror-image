@@ -1,8 +1,13 @@
+@use './../../base';
 
-
-.image-container {
+.image-download-container {
     width: 300px;
     margin: 50px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
 .result-image {
@@ -11,6 +16,15 @@
     border-radius: 50%;
     object-fit: cover;
     background-position: center;
-
     margin: auto auto;
+}
+
+.open-image-btn {
+    @include base.buttons;
+    width: 250px;
+    padding: 10px;
+}
+
+.open-image-btn:hover {
+    @include base.buttons-hover;
 }

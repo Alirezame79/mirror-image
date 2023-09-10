@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { imageProp } from '../types/imageProp';
 import './styles/ShowImage.scss';
 import demoImage from './../images/demo-image.jpg';
 
@@ -15,8 +14,11 @@ export default function ShowImage({url}: any) {
     }, [url])
 
     return (
-        <div className='image-container'>
+        <div className='image-download-container'>
             <img className='result-image' src={imageUrl} alt="result"/>
+            <a href={imageUrl}>
+                <button className='open-image-btn'>Open Image</button>
+            </a>
         </div>
     )
 }

@@ -20,14 +20,9 @@
 }
 
 .search-btn {
-    width: 75px;
-    padding: 7px;
-    border-radius: 6px;
-    border: none;
-    background-color: base.$btn-color;
+    @include base.buttons;
 }
 
 .search-btn:hover {
-    background-color: base.$btn-color-hover;
-    cursor: pointer;
+    @include base.buttons-hover;
 }
